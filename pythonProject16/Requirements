@@ -1,0 +1,15 @@
+    def enterdetails(self, user_name):
+        db = Session(engine)
+        user = TableDetails(name=user_name)
+        result = Table(name=user.name)
+        db.add(result)
+        db.commit()
+        return "The details is updated"
+
+    def details(self):
+        db = Session(engine)
+        result = db.query(Table).all()
+        return result
+
+
+    def getdetails(self):
